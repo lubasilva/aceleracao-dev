@@ -1,1 +1,2 @@
-index
+api
+endpoints
