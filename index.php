@@ -1,2 +1,1 @@
-api
-endpoints
+index
