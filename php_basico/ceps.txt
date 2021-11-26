@@ -1,0 +1,15 @@
+{"cep":"73092-010","logradouro":"Rodovia DF-425","complemento":"","bairro":"Setor Habitacional Contagem (Sobradinho)","localidade":"Bras\u00edlia","uf":"DF","ibge":"5300108","gia":"","ddd":"61","siafi":"9701"}
+{"cep":"04302-021","logradouro":"Rua Paracatu","complemento":"de 363\/364 a 719\/720","bairro":"Parque Imperial","localidade":"S\u00e3o Paulo","uf":"SP","ibge":"3550308","gia":"1004","ddd":"11","siafi":"7107"}
+{"cep":"29843-000","logradouro":"","complemento":"","bairro":"","localidade":"Vila Pav\u00e3o","uf":"ES","ibge":"3205150","gia":"","ddd":"27","siafi":"2935"}
+{"cep":"64000-290","logradouro":"Rua Arlindo Nogueira","complemento":"(Zona Norte) - at\u00e9 1005\/1006","bairro":"Centro","localidade":"Teresina","uf":"PI","ibge":"2211001","gia":"","ddd":"86","siafi":"1219"}
+{"cep":"30120-060","logradouro":"Rua dos Carij\u00f3s","complemento":"at\u00e9 349\/350","bairro":"Centro","localidade":"Belo Horizonte","uf":"MG","ibge":"3106200","gia":"","ddd":"31","siafi":"4123"}
+{"cep":"86105-000","logradouro":"","complemento":"","bairro":"Warta","localidade":"Londrina","uf":"PR","ibge":"4113700","gia":"","ddd":"43","siafi":"7667"}
+{"cep":"09961-660","logradouro":"Rua Bar\u00e3o de Vit\u00f3ria","complemento":"(Jd Ruyce)","bairro":"Casa Grande","localidade":"Diadema","uf":"SP","ibge":"3513801","gia":"2860","ddd":"11","siafi":"6377"}
+{"cep":"29843-000","logradouro":"","complemento":"","bairro":"","localidade":"Vila Pav\u00e3o","uf":"ES","ibge":"3205150","gia":"","ddd":"27","siafi":"2935"}
+{"cep":"75802-095","logradouro":"Avenida Tocantins","complemento":"","bairro":"Vila Jardim Rio Claro","localidade":"Jata\u00ed","uf":"GO","ibge":"5211909","gia":"","ddd":"64","siafi":"9433"}
+{"cep":"80520-560","logradouro":"Rua Carlos Augusto Cornelsen","complemento":"","bairro":"Bom Retiro","localidade":"Curitiba","uf":"PR","ibge":"4106902","gia":"","ddd":"41","siafi":"7535"}
+{"cep":"09961-660","logradouro":"Rua Bar\u00e3o de Vit\u00f3ria","complemento":"(Jd Ruyce)","bairro":"Casa Grande","localidade":"Diadema","uf":"SP","ibge":"3513801","gia":"2860","ddd":"11","siafi":"6377"}
+{"cep":"30130-005","logradouro":"Avenida Afonso Pena","complemento":"de 1352 a 1800 - lado par","bairro":"Boa Viagem","localidade":"Belo Horizonte","uf":"MG","ibge":"3106200","gia":"","ddd":"31","siafi":"4123"}
+{"cep":"64000-290","logradouro":"Rua Arlindo Nogueira","complemento":"(Zona Norte) - at\u00e9 1005\/1006","bairro":"Centro","localidade":"Teresina","uf":"PI","ibge":"2211001","gia":"","ddd":"86","siafi":"1219"}
+{"cep":"16015-244","logradouro":"Rua Cristiano Olsen","complemento":"at\u00e9 1300\/1301","bairro":"Jardim Sumar\u00e9","localidade":"Ara\u00e7atuba","uf":"SP","ibge":"3502804","gia":"1776","ddd":"18","siafi":"6155"}
+{"cep":"68700-216","logradouro":"Travessa Ant\u00f4nio Ferreira","complemento":"","bairro":"Igrejinha","localidade":"Capanema","uf":"PA","ibge":"1502202","gia":"","ddd":"91","siafi":"0443"}
