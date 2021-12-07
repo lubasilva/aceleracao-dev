@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\{UsuarioController};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/perfil', [UsuarioController::class, 'index'])->name('perfil');
+Route::get('/documentos', [DocumentoController::class, 'index'])->name('documentos');
