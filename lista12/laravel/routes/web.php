@@ -20,4 +20,9 @@ Route::get('/', function () {
 
 
 Route::get('/perfil', [UsuarioController::class, 'index'])->name('perfil');
+
 Route::get('/documentos', [DocumentoController::class, 'index'])->name('documentos');
+Route::get('/documentos/{id}', [DocumentoController::class, 'showLog'])->name('showLog');
+
+Route::get('assinaturas', [AssinaturaController::class, 'index'])->name('assinaturas');
+Route::get('assinaturas/{id}', [AssinaturaController::class, 'show'])->name('show');
