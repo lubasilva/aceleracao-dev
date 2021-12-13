@@ -17,12 +17,24 @@ class Atendente extends Pessoa{
         $this->horaroSaida = $horaroSaida;
     } 
 
+    public function getFuncao(){
+        return $this->funcao;
+    }
+
     public function setFuncao(string $funcao){
         $this->funcao = $funcao;
     }
 
+    public function gethorarioEntrada(){
+        return $this->horarioEntrada; 
+    }
+
     public function sethorarioEntrada(string $horarioEntrada){
         $this->horarioEntrada = $horarioEntrada; 
+    }
+
+    public function getHorarioSaida(){
+        return $this->horaroSaida;
     }
 
     public function setHorarioSaida(string $horarioSaido){
@@ -33,30 +45,21 @@ class Atendente extends Pessoa{
         return $this->id;
     }
 
-    public function getFuncao(){
-        return $this->funcao;
-    }
-
-    public function gethorarioEntrada(){
-        return $this->horarioEntrada; 
-    }
-
-    public function getHorarioSaida(){
-        return $this->horaroSaida;
-    }
-
     public function __toString()
     {
-        return json_encode([
-            'id'                    => $this->id,
-            'funcao'                => $this->funcao,
-            'horarioEntrada'        => $this->horarioEntrada,
-            'horaroSaida'           => $this->horaroSaida
-        ]);
+        $arrayAtributos = [];
+
+        array_push($arrayAtributos, $this->id);
+        array_push($arrayAtributos, $this->funcao);
+        array_push($arrayAtributos, $this->horarioEntrada);
+        array_push($arrayAtributos, $this->horaroSaida);
+
+        return json_encode($arrayAtributos);;
     }
 
 }
 
 $lola = new Atendente("Lola", "123123", "Miguel de assis", "Joao", "Maria", "345234", "jrtye", 1, "psicologa", "8:30", "17:00");
 
-var_dump($lola);
+echo "<br>";
+var_dump($lola->__toString());
