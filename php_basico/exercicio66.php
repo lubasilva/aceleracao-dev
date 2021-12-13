@@ -23,15 +23,19 @@ class Pessoa
 
     public function __toString()
     {
-        return json_encode([
-            'nome' => $this->nome,
-            'cpf' => $this->cpf,
-            'endereco' => $this->endereco,
-            'nomePai' => $this->nomePai,
-            'nomeMae' => $this->nomeMae,
-            'rg' => $this->rg,
-            'serialDeIdentificacao' => $this->serialDeIdentificacao,
-        ]);
+        $arrayAtributos = [];
+
+        array_push($arrayAtributos, $this->nome);
+        array_push($arrayAtributos, $this->cpf);
+        array_push($arrayAtributos, $this->endereco);
+        array_push($arrayAtributos, $this->nomePai);
+        array_push($arrayAtributos, $this->nomeMae);
+        array_push($arrayAtributos, $this->rg);
+        array_push($arrayAtributos, $this->serialDeIdentificacao);
+
+        $jsonAtributos = json_encode($arrayAtributos);
+
+        return $jsonAtributos;
     }
 }
 
