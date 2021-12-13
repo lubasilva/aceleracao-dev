@@ -59,3 +59,4 @@ class Atendente extends Pessoa{
 
 $lola = new Atendente("Lola", "123123", "Miguel de assis", "Joao", "Maria", "345234", "jrtye", 1, "psicologa", "8:30", "17:00");
 
+var_dump($lola);
