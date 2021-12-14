@@ -15,6 +15,9 @@ class CreateAssinaturasTable extends Migration
     {
         Schema::create('assinaturas', function (Blueprint $table) {
             $table->id();
+            $table->integer('qtd_char_assinatura');
+            $table->string('assinatura_padrao');
+            $table->integer('assinatura_usada');
             $table->timestamps();
         });
     }
