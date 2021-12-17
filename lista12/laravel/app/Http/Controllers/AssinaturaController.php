@@ -20,4 +20,18 @@ class AssinaturaController extends Controller
 
         return view('assinaturas.show', compact('assinatura'));
     }
+
+    public function novo()
+    {
+        return view('assinaturas.novo');
+    }
+
+    public function inserir(Request $request)
+    {
+        $assinatura = Assinatura::create($request->all());
+
+        if(!$assinatura) dd($assinatura);
+
+        return redirect()->route('assinatura.index')->with('msg', 'Assinatura cadastrada com sucesso!');
+    }
 }
