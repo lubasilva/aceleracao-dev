@@ -9,7 +9,7 @@ class Documento extends Model
 {
     use HasFactory;
 
-    protected $fillabel = [
+    protected $fillable = [
         'titulo',
         'tamanho_mb',
         'numero_assinaturas',
