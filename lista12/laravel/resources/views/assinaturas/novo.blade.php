@@ -23,7 +23,7 @@
 
         <div class="mb-3">
             <label class="form-label" for="assinatura_usada">Assinatura usada</label>
-            <input type="text" class="form-control" name="assinatura_usada" value="{{old('assinatura_usada')}}">
+            <input type="number" class="form-control" name="assinatura_usada" value="{{old('assinatura_usada')}}">
         </div>
 
         <button type="submit" class="btn btn-primary">Cadastrar</button>
