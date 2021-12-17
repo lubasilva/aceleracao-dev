@@ -20,6 +20,12 @@
             <li class="nav-item"><a href="{{route('documentos')}}" class="nav-link">101</a></li>
             <li class="nav-item"><a href="{{route('documentos')}}" class="nav-link">102</a></li>
             <li class="nav-item"><a href="{{route('assinatura.index')}}" class="nav-link">103</a></li>
+            <li class="nav-item"><a href="{{route('documentos.novo')}}" class="nav-link">104</a></li>
+            <li class="nav-item"><a href="{{route('documentos.novo')}}" class="nav-link">105</a></li>
+            <li class="nav-item"><a href="{{route('documentos')}}" class="nav-link">106</a></li>
+            <li class="nav-item"><a href="{{route('assinatura.novo')}}" class="nav-link">107</a></li>
+            <li class="nav-item"><a href="{{route('assinatura.novo')}}" class="nav-link">108</a></li>
+            <li class="nav-item"><a href="{{route('assinatura.index')}}" class="nav-link">109</a></li>
         </ul>
         </header>
     </div>
