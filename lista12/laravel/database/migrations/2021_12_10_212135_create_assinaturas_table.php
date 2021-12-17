@@ -17,7 +17,7 @@ class CreateAssinaturasTable extends Migration
             $table->id();
             $table->integer('qtd_char_assinatura');
             $table->string('assinatura_padrao');
-            $table->string('assinatura_usada');
+            $table->integer('assinatura_usada');
             $table->timestamps();
         });
     }
