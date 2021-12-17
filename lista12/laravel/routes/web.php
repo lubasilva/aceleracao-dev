@@ -22,7 +22,11 @@ Route::get('/', function () {
 Route::get('/perfil', [UsuarioController::class, 'index'])->name('perfil');
 
 Route::get('/documentos', [DocumentoController::class, 'index'])->name('documentos');
+Route::get('documentos/novo', [DocumentoController::class, 'novo'])->name('documentos.novo');
+Route::post('documentos/inserir', [DocumentoController::class, 'inserir'])->name('documentos.inserir');
+Route::delete('documentos/remover/{id}', [DocumentoController::class, 'remover'])->name('documentos.remover');
 Route::get('/documentos/{id}', [DocumentoController::class, 'showLog'])->name('showLog');
+
 
 Route::get('assinaturas', [AssinaturaController::class, 'index'])->name('assinatura.index');
 Route::get('assinaturas/{id}', [AssinaturaController::class, 'show'])->name('assinatura.show');
