@@ -30,12 +30,23 @@ class DocumentoController extends Controller
         return redirect()->route('documentos')->with('msg', 'Documento cadastrado com sucesso!');
     }
 
-    // public function showLog($id)
-    // {
-    //     $documento = Documento::find($id);
+    public function remover($id)
+    {
+        $documento = Documento::find($id);
 
-    //     Log::channel('documentos')->info('Documento consultado com sucesso!');
+        if(!$documento) return redirect()->route('documentos');
 
-    //     return view('documentos.showLog', compact('documento'));
-    // }
+        $documento->delete();
+
+        return redirect()->route('documentos')->with("msg", "Documento {$id} removido com sucesso!");
+    }
+
+    public function showLog($id)
+    {
+        $documento = Documento::find($id);
+
+        Log::channel('documentos')->info('Documento consultado com sucesso!');
+
+        return view('documentos.showLog', compact('documento'));
+    }
 }
