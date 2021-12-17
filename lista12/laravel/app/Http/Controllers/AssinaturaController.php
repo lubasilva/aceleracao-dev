@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RequestAssinatura;
 use App\Models\Assinatura;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class AssinaturaController extends Controller
         return view('assinaturas.novo');
     }
 
-    public function inserir(Request $request)
+    public function inserir(RequestAssinatura $request)
     {
         $assinatura = Assinatura::create($request->all());
 
