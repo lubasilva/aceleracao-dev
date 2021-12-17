@@ -13,6 +13,14 @@
         <div class="row d-flex justify-content-center mt-2">
             <a href="{{route('assinatura.index')}}" class="btn btn-primary col-6">Listar Assinaturas</a>
         </div>
+
+        <div class="row d-flex justify-content-center mt-2">
+            <form action="{{route('assinatura.remover', $assinatura->id)}}" method="POST">
+                @csrf
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-primary">Deletar Assinatura: {{$assinatura->id}}</button>
+            </form>
+        </div>
     </div>
 
 @include('includes.footer')

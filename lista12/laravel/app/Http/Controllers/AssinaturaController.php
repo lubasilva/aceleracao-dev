@@ -35,4 +35,15 @@ class AssinaturaController extends Controller
 
         return redirect()->route('assinatura.index')->with('msg', 'Assinatura cadastrada com sucesso!');
     }
+
+    public function remover($id)
+    {
+        $assinatura = Assinatura::find($id);
+
+        if(!$assinatura) return redirect()->route('assinatura.index');
+
+        $assinatura->delete();
+
+        return redirect()->route('assinatura.index')->with("msg", "Assintura {$id} removida com sucesso!");
+    }
 }
