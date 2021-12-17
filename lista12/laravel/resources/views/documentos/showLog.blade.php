@@ -15,6 +15,16 @@
         <div class="row d-flex justify-content-center mt-2">
             <a href="{{route('documentos')}}" class="btn btn-primary col-6">Listar Documentos</a>
         </div>
+
+        @if (session('msg'))
+            <p>{{session('msg')}}</p>
+        @endif
+
+        <form action="{{route('documentos.remover', $documento->id)}}" method="POST">
+            @csrf
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn btn-primary">Deletar Documento: {{$documento->id}}</button>
+        </form>
     </div>
 
 @include('includes.footer')
