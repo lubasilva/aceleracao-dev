@@ -1,6 +1,9 @@
 @include('includes.header')
     <div class="container">
         <h3 class="text-primary text-center"> Assinaturas </h3>
+        @if (session('msg'))
+            <p>{{session('msg')}}</p>
+        @endif
         <table class="table table-bordered mt-5">
             <thead>
                 <tr>
