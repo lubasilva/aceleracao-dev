@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{AssinaturaController, DocumentoController, UsuarioController};
+use App\Http\Controllers\{AssinaturaController, DocumentoController, LoginController, UsuarioController};
 use App\Models\Assinatura;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +28,8 @@ Route::post('documentos/inserir', [DocumentoController::class, 'inserir'])->name
 Route::delete('documentos/remover/{id}', [DocumentoController::class, 'remover'])->name('documentos.remover');
 Route::get('/documentos/{id}', [DocumentoController::class, 'showLog'])->name('showLog');
 
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('assinaturas', [AssinaturaController::class, 'index'])->name('assinatura.index');
 Route::get('assinaturas/novo', [AssinaturaController::class, 'novo'])->name('assinatura.novo');
