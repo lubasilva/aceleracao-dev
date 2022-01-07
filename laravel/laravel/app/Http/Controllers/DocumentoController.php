@@ -30,6 +30,14 @@ class DocumentoController extends Controller
         return redirect()->route('documentos')->with('msg', 'Documento cadastrado com sucesso!');
     }
 
+    public function update(RequestDocumentos $request, $id)
+    {
+        $documento = Documento::findOrFail($id);
+        $documento->update($request->all());
+
+        return view(compact('cad'));
+    }
+
     public function remover($id)
     {
         $documento = Documento::find($id);

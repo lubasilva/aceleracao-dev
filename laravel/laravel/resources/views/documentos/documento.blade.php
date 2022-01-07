@@ -1,5 +1,8 @@
 @include('includes.header')
     <div class="container">
+        @if (session('error'))
+        <p style="color:red">{{session('error')}}</p>
+        @endif
         <h3 class="text-primary text-center"> Documentos </h3>
         <table class="table table-bordered mt-5">
             <thead>

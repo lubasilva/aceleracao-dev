@@ -25,7 +25,6 @@ Route::get('/perfil', [UsuarioController::class, 'index'])->name('perfil');
 Route::get('/documentos', [DocumentoController::class, 'index'])->name('documentos');
 Route::get('documentos/novo', [DocumentoController::class, 'novo'])->name('documentos.novo');
 Route::post('documentos/inserir', [DocumentoController::class, 'inserir'])->name('documentos.inserir');
-Route::delete('documentos/remover/{id}', [DocumentoController::class, 'remover'])->name('documentos.remover');
 Route::get('/documentos/{id}', [DocumentoController::class, 'showLog'])->name('showLog');
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
@@ -36,3 +35,7 @@ Route::get('assinaturas/novo', [AssinaturaController::class, 'novo'])->name('ass
 Route::post('assinaturas/inserir', [AssinaturaController::class, 'inserir'])->name('assinatura.inserir');
 Route::delete('assinaturas/remover/{id}', [AssinaturaController::class, 'remover'])->name('assinatura.remover');
 Route::get('assinaturas/{id}', [AssinaturaController::class, 'show'])->name('assinatura.show');
+
+Route::middleware('valdiapermissao')->group(function(){
+    Route::delete('documentos/remover/{id}', [DocumentoController::class, 'remover'])->name('documentos.remover');
+});
