@@ -21,6 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::group(['namespace' => 'App\Http\Controllers\Api'], function(){
-    route::apiResource('/documentos', 'DocumentoController');
+    Route::post('/login', 'LoginApiController@login')->name('login');
+    Route::apiResource('/documentos', 'DocumentoController');
 });
 
