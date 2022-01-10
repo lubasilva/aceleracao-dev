@@ -1,17 +1,17 @@
 {
-    "name": "lukka/aceleracao-dev",
-    "autoload": {
-        "psr-4": {
-            "Lukka\\AceleracaoDev\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Lucas",
-            "email": "lubapisilva@gmail.com"
-        }
-    ],
-    "require": {
-        "fakerphp/faker": "^1.17"
+  "name": "lukka/aceleracao-dev",
+  "autoload": {
+    "psr-4": {
+      "AceleracaoDev\\": "jwt/"
     }
+  },
+  "authors": [
+    {
+      "name": "Lucas",
+      "email": "lubapisilva@gmail.com"
+    }
+  ],
+  "require": {
+    "fakerphp/faker": "^1.17"
+  }
 }
