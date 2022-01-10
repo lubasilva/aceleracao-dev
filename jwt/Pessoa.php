@@ -20,6 +20,26 @@ class Pessoa
         $this->escolaridade = $escolaridade;
     }
 
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getNome() {
+        return $this->nome;
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+
+    public function getProfissao() {
+        return $this->profissao;
+    }
+
+    public function getEscolaridade() {
+        return $this->escolaridade;
+    }
+
     public function setToken(string $token)
     {
         $this->token = $token;
