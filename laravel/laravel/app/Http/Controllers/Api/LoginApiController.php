@@ -20,7 +20,7 @@ class LoginApiController extends Controller
 
         return response()->json([
             'token' => $token
-        ]);
+        ], 201);
     }
 
     public function logout()
@@ -28,5 +28,15 @@ class LoginApiController extends Controller
         auth('api')->logout();
 
         return response()->json(['Mensagem' => 'Saiu com sucesso!'], 200);
+    }
+
+    public function refresh()
+    {
+        $token = auth('api')->refresh();
+
+        return response()->json([
+            'token' => $token,
+            'aviso' => 'Token atualizado com sucesso!'
+        ], 201);
     }
 }
