@@ -22,4 +22,11 @@ class LoginApiController extends Controller
             'token' => $token
         ]);
     }
+
+    public function logout()
+    {
+        auth('api')->logout();
+
+        return response()->json(['Mensagem' => 'Saiu com sucesso!'], 200);
+    }
 }
