@@ -15,11 +15,11 @@ class CreateDocumentosTable extends Migration
     {
         Schema::connection('pgsql')->create('documentos', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->integer('tamanho_mb');
-            $table->integer('numero_assinaturas');
-            $table->string('assinatura_responsavel');
-            $table->integer('quantidade_paginas');
+            $table->string('titulo', 45);
+            $table->integer('tamanho');
+            // $table->integer('numero_assinaturas');
+            $table->string('assinatura_responsavel', 45);
+            $table->integer('qnt_pages');
             $table->timestamps();
         });
     }

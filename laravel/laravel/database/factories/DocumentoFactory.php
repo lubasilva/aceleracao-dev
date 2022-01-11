@@ -14,11 +14,11 @@ class DocumentoFactory extends Factory
     public function definition()
     {
         return [
-            'titulo' => 'Titulo fake: '.$this->faker->name(),
-            'tamanho_mb' => $this->faker->randomNumber(2, false),
-            'numero_assinaturas' => $this->faker->randomDigitNotNull(),
-            'assinatura_responsavel' => 'Assinatura fake: '.$this->faker->name(),
-            'quantidade_paginas' => $this->faker->randomDigitNotNull(),
+            'titulo' => $this->faker->name(),
+            'tamanho' => $this->faker->randomNumber(2, false),
+            // 'numero_assinaturas' => $this->faker->randomDigitNotNull(),
+            'assinatura_responsavel' => $this->faker->name(),
+            'qnt_pages' => $this->faker->randomDigitNotNull(),
         ];
     }
 }
