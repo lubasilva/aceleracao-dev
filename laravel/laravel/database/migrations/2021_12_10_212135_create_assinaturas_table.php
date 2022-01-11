@@ -29,6 +29,6 @@ class CreateAssinaturasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('assinaturas');
+        Schema::connection("pgsql")->dropIfExists('assinaturas');
     }
 }
