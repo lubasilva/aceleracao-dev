@@ -4,16 +4,17 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Documento;
-use Facade\FlareClient\Solutions\ReportSolution;
 use Illuminate\Http\Request;
 
 class DocumentoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $model;
+
+    public function __construct(Documento $model)
+    {
+        $this->model = $model;
+        $this->middleware('jwt.auth');
+    }
     public function index()
     {
         $documento = Documento::paginate(10);

@@ -23,9 +23,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['namespace' => 'App\Http\Controllers\Api'], function(){
 
     Route::post('/login', 'LoginApiController@login')->name('login');
-
-    Route::group(["middleware" => "jwt.auth"], function(){
-        Route::apiResource('/documentos', 'DocumentoController');
-    });
+    Route::apiResource('/documentos', 'DocumentoController');
+    
+    // Route::group(["middleware" => "jwt.auth"], function(){
+    //     Route::apiResource('/documentos', 'DocumentoController');
+    // });
 });
 
