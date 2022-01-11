@@ -23,13 +23,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(['namespace' => 'App\Http\Controllers\Api'], function(){
 
     Route::post('/login', 'LoginApiController@login')->name('login');
-    Route::get('/logout', 'LoginApiController@logout')->name('logout');
-    Route::get('/refresh', 'LoginApiController@refresh')->name('refresh');
 
-    Route::apiResource('/documentos', 'DocumentoController');
 
-    // Route::group(["middleware" => "jwt.auth"], function(){
-    //     Route::apiResource('/documentos', 'DocumentoController');
-    // });
+
+    Route::group(["middleware" => "jwt.auth"], function(){
+        Route::apiResource('/documentos', 'DocumentoController');
+        Route::apiResource('/assinaturas', 'AssinaturaController');
+        Route::apiResource('/analises', 'AnaliseController');
+        Route::apiResource('/relatorios', 'RelatorioDeAnaliseController');
+
+        Route::get('/logout', 'LoginApiController@logout')->name('logout');
+        Route::get('/refresh', 'LoginApiController@refresh')->name('refresh');
+    });
 });
 
