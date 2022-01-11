@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             DocumentoSeeder::class,
-            AssinaturaSeeder::class
+            AssinaturaSeeder::class,
+            AnaliseSeeder::class
         ]);
     }
 }
