@@ -13,8 +13,9 @@ class DocumentoController extends Controller
     public function __construct(Documento $model)
     {
         $this->model = $model;
-        $this->middleware('jwt.auth');
+        // $this->middleware('jwt.auth');
     }
+
     public function index()
     {
         $documento = Documento::paginate(10);
@@ -22,50 +23,65 @@ class DocumentoController extends Controller
         return response()->json($documento);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        Documento::create($request->all());
+
+        return response()->json([
+            'msg' => 'Documento criado com sucesso',
+            'code' => '200'
+        ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
-        $documento = Documento::findOrFail($id);
+        $documento = Documento::find($id);
+
+        if(!$documento){
+            return response()->json([
+                'msg' => 'ID não encontrado',
+                'code' => '404'
+            ], 404);
+        }
 
         return response()->json($documento);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $documento = Documento::find($id);
+
+        if(!$documento){
+            return response()->json([
+                'msg' => 'ID não encontrado',
+                'code' => '404'
+            ], 404);
+        }
+
+        $documento->update($request->all());
+
+        return response()->json([
+            'msg' => 'Documento alterado com sucesso!!',
+            'code' => '200'
+        ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $documento = Documento::find($id);
+
+        if(!$documento){
+            return response()->json([
+                'msg' => 'ID não encontrado',
+                'code' => '404'
+            ], 404);
+        }
+
+        $documento->delete();
+
+        return response()->json([
+            'msg' => 'Documento deletado com sucesso!!',
+            'code' => '200'
+        ]);
     }
 }
