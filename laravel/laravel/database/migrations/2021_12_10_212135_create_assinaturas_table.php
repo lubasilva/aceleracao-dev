@@ -15,9 +15,9 @@ class CreateAssinaturasTable extends Migration
     {
         Schema::connection('pgsql')->create('assinaturas', function (Blueprint $table) {
             $table->id();
-            $table->integer('qtd_char_assinatura');
-            $table->string('assinatura_padrao');
-            $table->integer('assinatura_usada');
+            $table->integer('qtn_caracteres');
+            $table->string('assinatura_default', 105);
+            $table->integer('qnt_de_uso');
             $table->timestamps();
         });
     }
