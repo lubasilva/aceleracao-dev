@@ -16,4 +16,6 @@ class Documento extends Model
         'assinatura_responsavel',
         'quantidade_paginas'
     ];
+
+    protected $connection = 'pgsql';
 }

@@ -14,4 +14,6 @@ class Assinatura extends Model
         'assinatura_padrao',
         'assinatura_usada'
     ];
+
+    protected $connection = 'pgsql';
 }
